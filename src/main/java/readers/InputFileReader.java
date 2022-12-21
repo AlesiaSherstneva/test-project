@@ -1,11 +1,14 @@
 package readers;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 
 public class InputFileReader {
     static StringBuilder result;
-    static String path = "D:\\work\\repository\\test-project\\src\\main\\resources\\";
+    static String path = "D:" + File.separator + "work" + File.separator + "repository" + File.separator
+            + "test-project" + File.separator + "src" + File.separator + "main" + File.separator
+            + "resources" + File.separator;
 
     public static String[] readFile(String fileName) {
         result = new StringBuilder();

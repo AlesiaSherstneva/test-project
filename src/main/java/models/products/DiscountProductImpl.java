@@ -39,11 +39,6 @@ public class DiscountProductImpl implements Product {
 
     @Override
     public String toString() {
-        return String.format("%8s %8.2f x %d %8.2f\n%30s\n",
-                getProductName(),
-                getPrice(),
-                getCount(),
-                getPrice() * getCount(),
-                "5% discount (loyalty card)");
+        return product + String.format("%30s\n", "5% discount (loyalty card)");
     }
 }

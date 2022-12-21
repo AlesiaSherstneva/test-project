@@ -39,11 +39,6 @@ public class OnSaleProductImpl implements Product {
 
     @Override
     public String toString() {
-        return String.format("%8s %8.2f x %d %8.2f\n%30s\n",
-                getProductName(),
-                getPrice(),
-                getCount(),
-                getPrice() * getCount(),
-                "10% discount (promotion)");
+        return product + String.format("%30s\n", "10% discount (promotion)");
     }
 }
