@@ -2,6 +2,8 @@ package models.products;
 
 import enums.ProductName;
 
+import java.util.Locale;
+
 public class OnSaleProductImpl implements Product {
     private final Product product;
 
@@ -21,7 +23,8 @@ public class OnSaleProductImpl implements Product {
 
     @Override
     public double getPrice() {
-        return this.product.getPrice() * 0.9;
+        return Double.parseDouble
+                (String.format(Locale.ENGLISH,"%.2f",this.product.getPrice() * 0.9));
     }
 
     @Override
